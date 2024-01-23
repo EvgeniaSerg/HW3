@@ -9,7 +9,7 @@ public class CardOrderingServiceTest {
     @Test
     void shouldTestData() throws InterruptedException {
         open("http://localhost:9999/");
-        SelenideElement form = $("[method=post]");
+        SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Прохорова Анна-Мария");
         form.$("[data-test-id=phone] input").setValue("+79162354864");
         form.$("[data-test-id=agreement]").click();
